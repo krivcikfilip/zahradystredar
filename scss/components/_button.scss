@@ -1,0 +1,61 @@
+/**
+ * Styles for Button component
+ */
+
+.button {
+    transition: var(--fast-transition);
+    border-radius: var(--large-radius);
+    border: 1px solid transparent;
+    background: none;
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+//Variants
+.button.variant {
+    &--outline.color--primary {
+        background: none;
+        color: var(--color-primary);
+        border: 1px solid var(--color-primary);
+    }
+
+    &--outline.color--white {
+        background: none;
+        color: var(--color-white);
+        border: 1px solid var(--color-white);
+    }
+}
+
+//Colors
+.button.color {
+    &--primary {
+        background: var(--color-primary);
+        color: var(--color-white);
+
+        &:hover {
+            box-shadow: 0 10px 30px rgba(var(--color-primary-rgb), 0.1);
+        }
+    }
+
+    &--white {
+        background: var(--color-white);
+        color: var(--color-);
+
+        &:hover {
+            box-shadow: 0 10px 30px rgba(var(--color-primary-rgb), 0.1);
+        }
+    }
+}
+
+//Sizes
+.button.size {
+    &--medium {
+        padding: 7px 50px;
+    }
+
+    &--small {
+        padding: 5px 30px;
+    }
+}

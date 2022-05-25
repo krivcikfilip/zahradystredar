@@ -1,0 +1,46 @@
+/**
+ * Styles for NavigationItem component
+ */
+
+.navigation__item {
+    position: relative;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    opacity: 0.6;
+
+    &--logo {
+        padding: 0;
+        transition: var(--fast-transition);
+
+        &::after {
+            display: none;
+        }
+    }
+
+    &:hover,
+    &--active {
+        opacity: 1;
+    }
+
+    &::after {
+        @include absolute-center-x;
+        content: "";
+        opacity: 0;
+        bottom: 0;
+        transition: var(--fast-transition);
+        background: var(--color-primary);
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+    }
+}
+
+//Statuses
+.navigation__item.status {
+    &--active,
+    &--active::after {
+        opacity: 1 !important;
+    }
+}

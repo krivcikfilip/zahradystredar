@@ -1,0 +1,41 @@
+/**
+ * Styles for InfoBox component
+ */
+
+.info-box {
+    position: relative;
+    background: var(--color-white);
+    border-radius: var(--large-radius);
+    box-shadow: 0 5px 10px rgba(var(--color-primary-rgb), 0.1);
+}
+
+//Sizes
+.info-box.size {
+    &--small {
+        width: 280px;
+    }
+}
+
+//Layout
+.info-box.layout--icon-left {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    padding: 20px 20px 20px 0;
+
+    .icon {
+        @include absolute-center-y;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        position: absolute;
+        left: -30px;
+        width: 100px;
+    }
+
+    .typography {
+        grid-column: 2 / 3;
+    }
+}
+
+.info-box.layout--icon-top {
+}

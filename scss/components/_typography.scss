@@ -1,0 +1,76 @@
+/**
+ * Styles for Typography component
+ */
+
+.typography {
+    span.underline {
+        position: relative;
+
+        &::after {
+            @include absolute-center-x;
+            content: "";
+            bottom: 0;
+            width: 100%;
+            height: 8px;
+            background: var(--color-secondary);
+        }
+    }
+}
+
+//Family
+.typography.family {
+    &--lato {
+        font-family: var(--family-lato);
+    }
+
+    &--rubik {
+        letter-spacing: 0.3px;
+        font-family: var(--family-rubik);
+    }
+}
+
+//Weight
+.typography.weight {
+    &--light {
+        font-weight: 300;
+    }
+
+    &--regular {
+        font-weight: 400;
+    }
+
+    &--medium {
+        font-weight: 500;
+    }
+
+    &--semi {
+        font-weight: 600;
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+}
+
+//Sizes
+.typography.size {
+    &--large-title {
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    &--small-title {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    &--text {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    &--caption {
+        font-size: 14px;
+        line-height: 26px;
+    }
+}

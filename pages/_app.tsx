@@ -1,8 +1,26 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../scss/main.scss";
+import "react-image-lightbox/style.css";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+import type { AppProps } from "next/app";
+import { QueryClientProvider } from "react-query";
+import { queryClient } from "../api/query";
+import Lightbox from "../components/Lightbox";
+import { Provider } from "react-redux";
+import { store } from "../store/store";
 
-export default MyApp
+/**
+ * NextJs app
+ */
+const App = ({ Component, pageProps }: AppProps) => {
+    return (
+        <Provider store={store}>
+            <QueryClientProvider client={queryClient}>
+                <Component {...pageProps} />
+
+                <Lightbox />
+            </QueryClientProvider>
+        </Provider>
+    );
+};
+
+export default App;

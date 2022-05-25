@@ -1,0 +1,14 @@
+/**
+ * Styles for AppLayout component
+ */
+
+.app-layout {
+    max-width: 1440px;
+    margin: auto;
+
+    nav,
+    section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}

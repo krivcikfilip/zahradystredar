@@ -1,0 +1,57 @@
+/**
+ * Styles for Hero component
+ */
+
+.hero {
+    position: relative;
+
+    &__buttons {
+        margin-top: 40px;
+
+        .button:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    .typography--title {
+        margin-bottom: 20px;
+    }
+}
+
+//Variants
+.hero.variant--homepage {
+    .hero__content {
+        padding-top: 130px;
+        max-width: 650px;
+    }
+
+    .hero__objects {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .hero__objects .image {
+        position: absolute;
+    }
+
+    .image--can {
+        top: 0;
+        right: 0;
+        z-index: 3;
+    }
+
+    .image--circle {
+        top: -150px;
+        right: -300px;
+        z-index: 1;
+    }
+
+    .image--grass {
+        top: 300px;
+        right: 300px;
+        z-index: 2;
+    }
+}

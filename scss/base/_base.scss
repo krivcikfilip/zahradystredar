@@ -1,0 +1,47 @@
+/**
+ * Base styles
+ */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #1d4d4f;
+    --color-primary-rgb: 29, 77, 79;
+    --color-secondary: #caffb9;
+    --color-white: #ffffff;
+    --color-grey: #f8f8f8;
+    --family-lato: "Lato", sans-serif;
+    --family-rubik: "Rubik", sans-serif;
+    --large-radius: 20px;
+    --fast-transition: all 0.1s ease-in-out;
+}
+
+body {
+    background: var(--color-grey);
+
+    margin-bottom: 200px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body,
+button,
+input,
+a {
+    color: var(--color-primary);
+    font-family: var(--family-lato);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+    cursor: pointer;
+}

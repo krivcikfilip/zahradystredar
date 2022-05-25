@@ -1,0 +1,15 @@
+/**
+ * Styles for Navigation component
+ */
+
+.navigation {
+    @include flex-center-between;
+    list-style: none;
+    height: 50px;
+    margin: 60px 0;
+
+    &__col {
+        display: flex;
+        height: 100%;
+    }
+}

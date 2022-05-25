@@ -1,0 +1,21 @@
+/**
+ * Styles for Home page
+ */
+
+//Sections
+.home .section {
+    &--features {
+        margin-top: 200px;
+
+        .section__body {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: -20px;
+        }
+
+        .info-box {
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+    }
+}

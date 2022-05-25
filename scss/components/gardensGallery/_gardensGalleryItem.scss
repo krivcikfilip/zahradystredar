@@ -1,0 +1,38 @@
+/**
+* Styles for GardenGalleryItem component
+*/
+
+.gardens-gallery__item {
+    transition: var(--fast-transition);
+    position: relative;
+    margin-right: 20px;
+    margin-top: 20px;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:hover &__more-info {
+        opacity: 1;
+    }
+
+    &__more-info {
+        opacity: 0;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-white);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: var(--fast-transition);
+        background: rgba(var(--color-primary-rgb), 0.8);
+    }
+}
