@@ -4,6 +4,7 @@
 
 .gardens-gallery__item {
     transition: var(--fast-transition);
+    animation: 0.3s fade-in;
     position: relative;
     width: 100%;
     height: 100%;
