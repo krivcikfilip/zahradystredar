@@ -2,27 +2,31 @@ import React from "react";
 import ReactLightbox from "react-image-lightbox";
 import { useAppDispatch, useAppSelector } from "../redux/store";
 import { closeLightbox, selectLightbox, setLightboxIndex } from "../redux/reducers/lightboxReducer";
+import * as _ from "lodash";
 
 const Lightbox = () => {
     const { isOpen, images, index } = useAppSelector(selectLightbox);
     const dispatch = useAppDispatch();
+
+    const imagesSize = _.size(images);
+
+    const prevIndex = index - 1 < 0 ? imagesSize - 1 : index - 1;
+    const nextIndex = index + 1 === imagesSize ? 0 : index + 1;
 
     const onCloseRequest = () => {
         dispatch(closeLightbox());
     };
 
     const onMovePrevRequest = () => {
-        const newIndex = (index + images.length - 1) % images.length;
-        dispatch(setLightboxIndex(newIndex));
+        dispatch(setLightboxIndex(prevIndex));
     };
 
     const onMoveNextRequest = () => {
-        const newIndex = (index + 1) % images.length;
-        dispatch(setLightboxIndex(newIndex));
+        dispatch(setLightboxIndex(nextIndex));
     };
 
-    const nextSrc = images[(index + 1) % images.length];
-    const prevSrc = images[(index + images.length - 1) % images.length];
+    const nextSrc = images[nextIndex];
+    const prevSrc = images[prevIndex];
 
     if (!isOpen) return <></>;
 
