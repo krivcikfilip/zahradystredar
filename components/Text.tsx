@@ -1,4 +1,4 @@
-import React, { createElement } from "react";
+import { createElement } from "react";
 import { PropsWithClassSelector, PropsWithValue } from "../types/react";
 import ClassName from "../utils/ClassName";
 import * as _ from "lodash";

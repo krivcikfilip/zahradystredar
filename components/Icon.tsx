@@ -1,14 +1,11 @@
 import React from "react";
-import ClassName from "../utils/ClassName";
 
 /**
  * Icon component
  */
 const Icon = ({ name }: Props) => {
-    const className = new ClassName("icon");
-
     return (
-        <svg className={className.parse()}>
+        <svg className="icon">
             <use xlinkHref={`/assets/images/sprite.svg#${name}`} />
         </svg>
     );
