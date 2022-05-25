@@ -1,5 +1,5 @@
 /**
- * Styles for Typography component
+ * Styles for Text component
  */
 
 .typography {
@@ -19,8 +19,9 @@
 
 //Family
 .typography.family {
-    &--lato {
-        font-family: var(--family-lato);
+    &--montserrat {
+        letter-spacing: 0.3px;
+        font-family: var(--family-montserrat);
     }
 
     &--rubik {

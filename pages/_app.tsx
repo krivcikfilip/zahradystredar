@@ -6,7 +6,7 @@ import { QueryClientProvider } from "react-query";
 import { queryClient } from "../api/query";
 import Lightbox from "../components/Lightbox";
 import { Provider } from "react-redux";
-import { store } from "../store/store";
+import { store } from "../redux/store";
 
 /**
  * NextJs app

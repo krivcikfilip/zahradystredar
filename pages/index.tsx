@@ -1,11 +1,12 @@
 import React from "react";
-import AppLayout from "../Layout/AppLayout";
-import Hero from "../Layout/Hero";
+import AppLayout from "../layout/AppLayout";
+import Hero from "../layout/Hero";
 import { useRouter } from "next/router";
 import { routes } from "../routes";
-import Section from "../Layout/Section";
+import Section from "../layout/Section";
 import InfoBox from "../components/InfoBox";
 import GardensGallery from "../components/GardensGallery/GardensGallery";
+import OurJobBoxes from "../components/OurJobBoxes";
 
 /**
  * Homepage
@@ -50,9 +51,10 @@ const Homepage = () => {
                     icon="tree-stump"
                 />
             </Section>
-            <Section title="Z našich realizací">
+            <Section title="Z našich realizací" classSelector="realizations">
                 <GardensGallery />
             </Section>
+            <OurJobBoxes />
         </AppLayout>
     );
 };

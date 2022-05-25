@@ -1,6 +1,6 @@
 import React from "react";
 import ClassName from "../utils/ClassName";
-import Typography from "../components/Typography";
+import Text from "../components/Text";
 import Button, { ButtonProps } from "../components/Button";
 import * as _ from "lodash";
 import Image from "../components/Image";
@@ -27,7 +27,7 @@ const Hero = ({ title, description, variant, buttons = [] }: Props) => {
     return (
         <section className={className.parse()}>
             <div className="hero__content">
-                <Typography
+                <Text
                     as="h1"
                     value={title}
                     family="rubik"
@@ -36,7 +36,7 @@ const Hero = ({ title, description, variant, buttons = [] }: Props) => {
                     classSelector="title"
                     underlineLastWorld
                 />
-                <Typography size="text" value={description} classSelector="description" />
+                <Text size="text" value={description} classSelector="description" />
                 {renderButtons()}
             </div>
             {variant === "homepage" && (

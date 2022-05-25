@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import lightboxReducer from "../reducers/lightboxReducer";
+import lightboxReducer from "./reducers/lightboxReducer";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 export const store = configureStore({

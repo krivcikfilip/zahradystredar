@@ -7,6 +7,10 @@
     background: var(--color-white);
     border-radius: var(--large-radius);
     box-shadow: 0 5px 10px rgba(var(--color-primary-rgb), 0.1);
+
+    .typography--title {
+        margin-bottom: 5px;
+    }
 }
 
 //Sizes
@@ -14,9 +18,13 @@
     &--small {
         width: 280px;
     }
+
+    &--full-width {
+        width: 100%;
+    }
 }
 
-//Layout
+//layout
 .info-box.layout--icon-left {
     overflow: hidden;
     display: grid;
@@ -38,4 +46,12 @@
 }
 
 .info-box.layout--icon-top {
+    padding: 40px 20px 20px;
+
+    .icon {
+        width: 100px;
+        position: absolute;
+        top: -110px;
+        left: 0;
+    }
 }

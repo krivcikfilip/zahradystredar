@@ -1,7 +1,7 @@
 import React from "react";
 import { PropsWithChildren, PropsWithClassSelector } from "../types/react";
 import ClassName from "../utils/ClassName";
-import Typography from "../components/Typography";
+import Text from "../components/Text";
 
 /**
  * Section with title component
@@ -14,7 +14,7 @@ const Section = ({ title, classSelector, children }: Props) => {
         <section className={className.parse()}>
             {title && (
                 <div className="section__head">
-                    <Typography
+                    <Text
                         size="large-title"
                         weight="bold"
                         family="rubik"

@@ -4,13 +4,13 @@ import ClassName from "../utils/ClassName";
 import * as _ from "lodash";
 
 /**
- * Typography component
+ * Text component
  */
-const Typography = ({
+const Text = ({
     value,
     as = "p",
     size = "text",
-    family = "lato",
+    family = "montserrat",
     weight = "regular",
     classSelector,
     underlineLastWorld = false,
@@ -42,8 +42,8 @@ interface Props extends PropsWithValue, PropsWithClassSelector {
     underlineLastWorld?: boolean;
     as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
     size?: "large-title" | "small-title" | "text" | "caption";
-    family?: "lato" | "rubik";
+    family?: "montserrat" | "rubik";
     weight?: "light" | "regular" | "medium" | "semi" | "bold";
 }
 
-export default Typography;
+export default Text;

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AppState } from "../store/store";
+import { AppState } from "../store";
 
 interface State {
     isOpen: boolean;

@@ -1,7 +1,7 @@
 import React from "react";
 import ClassName from "../utils/ClassName";
 import Icon, { IconName } from "./Icon";
-import Typography from "./Typography";
+import Text from "./Text";
 
 /**
  * InfoBox component
@@ -14,7 +14,7 @@ const InfoBox = ({ icon, description, title, size = "small", layout = "icon-left
     return (
         <div className={className.parse()}>
             <Icon name={icon} />
-            <Typography
+            <Text
                 as="h2"
                 size="small-title"
                 weight="medium"
@@ -22,18 +22,13 @@ const InfoBox = ({ icon, description, title, size = "small", layout = "icon-left
                 value={title}
                 classSelector="title"
             />
-            <Typography
-                size="caption"
-                weight="light"
-                value={description}
-                classSelector="description"
-            />
+            <Text size="caption" weight="light" value={description} classSelector="description" />
         </div>
     );
 };
 
 interface Props {
-    size?: "small" | "large";
+    size?: "small" | "full-width";
     layout?: "icon-left" | "icon-top";
     title: string;
     description: string;

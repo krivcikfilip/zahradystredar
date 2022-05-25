@@ -16,7 +16,7 @@
     --color-secondary: #caffb9;
     --color-white: #ffffff;
     --color-grey: #f8f8f8;
-    --family-lato: "Lato", sans-serif;
+    --family-montserrat: "Montserrat", sans-serif;
     --family-rubik: "Rubik", sans-serif;
     --large-radius: 20px;
     --fast-transition: all 0.1s ease-in-out;
@@ -37,7 +37,7 @@ button,
 input,
 a {
     color: var(--color-primary);
-    font-family: var(--family-lato);
+    font-family: var(--family-montserrat);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactLightbox from "react-image-lightbox";
-import { useAppDispatch, useAppSelector } from "../store/store";
-import { closeLightbox, selectLightbox, setLightboxIndex } from "../reducers/lightboxReducer";
+import { useAppDispatch, useAppSelector } from "../redux/store";
+import { closeLightbox, selectLightbox, setLightboxIndex } from "../redux/reducers/lightboxReducer";
 
 const Lightbox = () => {
     const { isOpen, images, index } = useAppSelector(selectLightbox);
@@ -28,7 +28,7 @@ const Lightbox = () => {
 
     return (
         <ReactLightbox
-            onImageLoad={() => console.log("yes")}
+            clickOutsideToClose={true}
             nextSrc={nextSrc}
             prevSrc={prevSrc}
             mainSrc={images[index]}

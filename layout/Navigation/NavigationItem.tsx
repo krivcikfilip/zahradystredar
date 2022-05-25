@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import { useRouter } from "next/router";
 import ClassName from "../../utils/ClassName";
 import Link from "next/link";
-import Typography from "../../components/Typography";
+import Text from "../../components/Text";
 import { PropsWithClassSelector } from "../../types/react";
 
 /**
@@ -20,7 +20,7 @@ const NavigationItem = ({ href, classSelector, value, children }: ExtendedProps)
     return (
         <Link href={href}>
             <a className={className.parse()}>
-                {value ? <Typography family="rubik" weight="medium" value={value} /> : children}
+                {value ? <Text family="rubik" weight="medium" value={value} /> : children}
             </a>
         </Link>
     );

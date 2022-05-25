@@ -1,7 +1,7 @@
 import React from "react";
 import { PropsWithValue } from "../types/react";
 import ClassName from "../utils/ClassName";
-import Typography from "./Typography";
+import Text from "./Text";
 
 /**
  * Button component
@@ -15,7 +15,7 @@ const Button = ({ value, variant, color = "primary", size = "medium", onClick }:
 
     return (
         <button onClick={onClick} className={className.parse()}>
-            <Typography
+            <Text
                 family="rubik"
                 weight="medium"
                 value={value}

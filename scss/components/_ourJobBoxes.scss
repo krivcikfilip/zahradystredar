@@ -1,0 +1,13 @@
+/**
+ * Styles for OurJobBoxes component
+ */
+
+.section--our-job {
+    .section__body {
+        padding-top: 80px;
+        display: grid;
+        column-gap: 30px;
+        row-gap: 180px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
