@@ -1,10 +1,10 @@
 import React from "react";
 import GardensGalleryItem from "./GardensGalleryItem";
 import { usePosts } from "../../api/queries/usePosts";
-import * as _ from "lodash";
 import { Unless, When } from "react-if";
 import ContentLoading from "../ContentLoading";
 import ClassName from "../../utils/ClassName";
+import * as _ from "lodash";
 
 const GardensGallery = () => {
     const { posts, isLoading } = usePosts();
