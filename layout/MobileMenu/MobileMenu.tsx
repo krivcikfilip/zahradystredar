@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { When } from "react-if";
 import Logo from "../../components/Logo";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
@@ -6,6 +6,7 @@ import { closeMobileMenu, selectMobileMenu } from "../../redux/reducers/mobileMe
 import Icon from "../../components/Icon";
 import MobileMenuItem from "./MobileMenuItem";
 import { routes } from "../../routes";
+import { useRouter } from "next/router";
 
 /**
  * Mobile menu component
@@ -14,9 +15,15 @@ const MobileMenu = () => {
     const { isOpen } = useAppSelector(selectMobileMenu);
     const dispatch = useAppDispatch();
 
+    const router = useRouter();
+
     const closeMenu = () => {
         dispatch(closeMobileMenu());
     };
+
+    useEffect(() => {
+        dispatch(closeMobileMenu());
+    }, [dispatch, router.route]);
 
     return (
         <When condition={isOpen}>

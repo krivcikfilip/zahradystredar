@@ -16,7 +16,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         <Provider store={store}>
             <QueryClientProvider client={queryClient}>
                 <Component {...pageProps} />
-
                 <Lightbox />
             </QueryClientProvider>
         </Provider>
