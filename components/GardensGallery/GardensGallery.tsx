@@ -18,7 +18,7 @@ const GardensGallery = () => {
         const { width } = dimension;
 
         if (width < 600 && width > 400) {
-            setLimit(10);
+            setLimit(8);
         } else if (width <= 400) {
             setLimit(6);
         } else {

@@ -31,24 +31,24 @@ const Homepage = () => {
             />
             <Section classSelector="features">
                 <InfoBox
-                    title="Nový trávník"
-                    description="Nam porta neque vel lectus dictum"
-                    icon="tree-stump"
+                    title="Návrhy"
+                    description="Navrhneme vám Vaší novou zahradu."
+                    icon="flower"
                 />
                 <InfoBox
-                    title="Zahrada na klíč"
-                    description="Nam porta neque vel lectus dictum"
-                    icon="tree-stump"
+                    title="Realizace"
+                    description="Přeneseme Váš sen do reality"
+                    icon="stones"
                 />
                 <InfoBox
-                    title="Údržba zahrady"
-                    description="Nam porta neque vel lectus dictum"
-                    icon="tree-stump"
+                    title="Údržba zeleně"
+                    description="Poradíme si s údržbou trávníků."
+                    icon="spray"
                 />
                 <InfoBox
                     title="Spousty dalších.."
-                    description="Nam porta neque vel lectus dictum"
-                    icon="tree-stump"
+                    description="Více informací se dozvíte na webu."
+                    icon="gardener"
                 />
             </Section>
             <Section title="Z našich realizací" classSelector="realizations">

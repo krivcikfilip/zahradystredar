@@ -25,9 +25,18 @@
         @include absolute-center-y;
         grid-column: 1 / 2;
         grid-row: 1 / 3;
-        position: absolute;
         left: -30px;
         width: 100px;
+    }
+
+    .icon.name--stones {
+        transform: translateY(calc(-50% + 10px));
+        left: -40px;
+    }
+
+    .icon.name--flower {
+        transform: translateY(calc(-50% + 2px));
+        left: -35px;
     }
 
     .text {
@@ -36,12 +45,13 @@
 }
 
 .info-box.layout--icon-top {
-    padding: 40px 20px 20px;
+    padding: 20px;
 
     .icon {
         width: 100px;
         position: absolute;
         top: -110px;
         left: 0;
+        z-index: -1;
     }
 }

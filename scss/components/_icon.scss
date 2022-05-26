@@ -7,3 +7,18 @@
     transition: var(--fast-transition);
     width: 100%;
 }
+
+//Names
+.icon.name {
+    &--grass {
+        transform: translateY(15px);
+    }
+
+    &--stones {
+        transform: translateY(10px);
+    }
+
+    &--flower {
+        transform: translateX(-10px);
+    }
+}
