@@ -3,12 +3,15 @@ import { findFBPostsRequest } from "../../api/requests/facebook/findFBPosts";
 import * as _ from "lodash";
 import { IFBPost, IFBPostSubAttachment } from "../../api/responses/facebook/fbPosts";
 import { IImage, IPost } from "../../api/responses/api/posts";
+import { ParamsWithLimit } from "../../api/params";
 
 /**
  * Api for posts
  */
 export default async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method !== "GET") return res.status(405);
+
+    const params = req.query as ParamsWithLimit;
 
     const { data } = await findFBPostsRequest();
 
@@ -45,5 +48,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         [] as IPost[]
     );
 
-    return res.status(200).json({ posts });
+    return res.status(200).json({ posts: posts.slice(0, params.limit || 50) });
 };

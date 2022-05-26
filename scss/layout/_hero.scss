@@ -68,6 +68,14 @@
 }
 
 @media (max-width: 600px) {
+    .hero {
+        .button {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
     .hero.variant--homepage {
         .hero__content {
             padding-top: 60px;

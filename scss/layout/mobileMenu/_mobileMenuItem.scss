@@ -1,0 +1,14 @@
+/**
+ * Styles for MobileMenuItem component
+ */
+
+.mobile-menu__item {
+    display: block;
+    margin-bottom: 50px;
+
+    .text {
+        color: var(--color-white);
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

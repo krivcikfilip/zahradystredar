@@ -15,7 +15,7 @@ interface Props {
     name: Name;
 }
 
-type Name = "tree-stump";
+type Name = "tree-stump" | "menu" | "close";
 
 export type { Name as IconName };
 export default Icon;

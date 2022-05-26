@@ -1,0 +1,41 @@
+/**
+ * Styles for MobileMenu component
+ */
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    padding-top: 60px;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+
+    .logo {
+        filter: brightness(0) invert(1);
+    }
+
+    &__head {
+        @include flex-center-between;
+    }
+
+    &__body {
+        margin: auto;
+    }
+
+    &__close {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid var(--color-white);
+        padding: 10px;
+        background: none;
+
+        .icon {
+            height: 100%;
+            fill: var(--color-white);
+        }
+    }
+}
