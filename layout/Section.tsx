@@ -6,9 +6,10 @@ import Text from "../components/Text";
 /**
  * Section with title component
  */
-const Section = ({ title, classSelector, children }: Props) => {
+const Section = ({ title, classSelector, children, isLoading }: Props) => {
     const className = new ClassName("section");
     if (classSelector) className.addSelector(classSelector);
+    if (isLoading) className.add("loading");
 
     return (
         <section className={className.parse()}>
@@ -30,6 +31,7 @@ const Section = ({ title, classSelector, children }: Props) => {
 
 interface Props extends PropsWithClassSelector, PropsWithChildren {
     title?: string;
+    isLoading?: boolean;
 }
 
 export default Section;

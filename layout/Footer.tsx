@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
             <div className="footer__contact">
                 <Text
-                    value="Radim středa"
+                    value="Radim Středa"
                     size="small-title"
                     weight="medium"
                     family="rubik"
@@ -52,12 +52,11 @@ const Footer = () => {
                 <div className="footer__col">
                     <Text value="+420 777 227 768" />
                     <Text value="stredar@seznam.cz" />
-                    <Text value="IČO:" />
+                    <Text value="<strong>IČO:</strong> 60895136" />
                 </div>
                 <div className="footer__col">
                     <Text value="Bohuslavice 405" />
                     <Text value="Bohuslavice nad Metují, 549 06" />
-                    <Text value="DIČ: " />
                 </div>
             </div>
             <div className="footer__link-tree">
@@ -100,7 +99,7 @@ const Footer = () => {
                 />
             </div>
             <div className="footer__copy">
-                <Text value="© All rights reserved Copyrights 2022  | " as="span" />
+                <Text value="Osoba zapsaná v živnostenském rejstříku | " as="span" />
                 <Text value="Vytvořil " as="span" />
                 <Link href="https://www.filipkrivcik.cz/">
                     <a target="_blank">

@@ -4,6 +4,8 @@ import Text from "../components/Text";
 import Button, { ButtonProps } from "../components/Button";
 import * as _ from "lodash";
 import Image from "../components/Image";
+import { When } from "react-if";
+import Breadcrumb from "./Breadcrumb";
 
 /**
  * Hero component
@@ -27,6 +29,9 @@ const Hero = ({ title, description, variant, buttons = [] }: Props) => {
     return (
         <section className={className.parse()}>
             <div className="hero__content">
+                <When condition={variant === "page"}>
+                    <Breadcrumb />
+                </When>
                 <Text
                     as="h1"
                     value={title}
@@ -34,7 +39,7 @@ const Hero = ({ title, description, variant, buttons = [] }: Props) => {
                     weight="bold"
                     size="large-title"
                     classSelector="title"
-                    underlineLastWorld
+                    underlineLastWorld={variant === "homepage"}
                 />
                 <Text size="text" value={description} classSelector="description" />
                 {renderButtons()}

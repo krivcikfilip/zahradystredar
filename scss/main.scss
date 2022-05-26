@@ -6,6 +6,7 @@
 //layout
 @import "layout/appLayout";
 @import "layout/hero";
+@import "layout/breadcrumb";
 @import "layout/section";
 @import "layout/footer";
 
@@ -24,8 +25,11 @@
 @import "components/contentLoading";
 @import "components/ourJobBoxes";
 
-@import "components/gardensGallery/gardensGallery";
-@import "components/gardensGallery/gardensGalleryItem";
+@import "components/realizations/realizations";
+@import "components/realizations/realizationsItem";
 
 //Pages
 @import "pages/home";
+@import "pages/realizations";
+@import "pages/contact";
+@import "pages/our-job";

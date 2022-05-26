@@ -2,9 +2,9 @@ import React from "react";
 import Section from "../layout/Section";
 import InfoBox from "./InfoBox";
 
-const OurJobBoxes = () => {
+const OurJobBoxes = ({ title }: Props) => {
     return (
-        <Section title="Co děláme?" classSelector="our-job">
+        <Section title={title} classSelector="our-job">
             <InfoBox
                 title="Návrhy"
                 description="Pomůžeme Vám s navrhnutím Vaší nové, nebo úpravou již stávající zahrady. Vytvoříme realizační projekt pomocí počítačové simulace."
@@ -50,5 +50,9 @@ const OurJobBoxes = () => {
         </Section>
     );
 };
+
+interface Props {
+    title?: string;
+}
 
 export default OurJobBoxes;

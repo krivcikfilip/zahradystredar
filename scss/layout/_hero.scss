@@ -5,6 +5,11 @@
 .hero {
     position: relative;
 
+    .hero__content {
+        padding-top: 130px;
+        max-width: 650px;
+    }
+
     &__buttons {
         margin-top: 30px;
 
@@ -21,11 +26,6 @@
 
 //Variants
 .hero.variant--homepage {
-    .hero__content {
-        padding-top: 130px;
-        max-width: 650px;
-    }
-
     .hero__objects {
         position: absolute;
         right: 0;
@@ -46,6 +46,7 @@
     }
 
     .image--circle {
+        animation: 0.3s fade-in;
         top: -150px;
         right: 0;
         z-index: 1;
@@ -72,12 +73,8 @@
         .button {
             width: 100%;
         }
-    }
-}
 
-@media (max-width: 600px) {
-    .hero.variant--homepage {
-        .hero__content {
+        &__content {
             padding-top: 60px;
         }
     }

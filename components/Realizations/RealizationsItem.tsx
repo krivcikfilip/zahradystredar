@@ -5,7 +5,10 @@ import * as _ from "lodash";
 import { useAppDispatch } from "../../redux/store";
 import { openLightbox } from "../../redux/reducers/lightboxReducer";
 
-const GardensGalleryItem = ({ description, preview, images }: IPost) => {
+/**
+ * Item for realizations component
+ */
+const RealizationsItem = ({ description, preview, images }: IPost) => {
     const dispatch = useAppDispatch();
 
     const openGallery = () => {
@@ -14,10 +17,10 @@ const GardensGalleryItem = ({ description, preview, images }: IPost) => {
     };
 
     return (
-        <div className="gardens-gallery__item" onClick={openGallery}>
+        <div className="realizations__item" onClick={openGallery}>
             <img src={preview} alt={description} />
 
-            <div className="gardens-gallery__item__more-info">
+            <div className="realizations__item__more-info">
                 <Button
                     onClick={openGallery}
                     value="Zobrazit více"
@@ -29,4 +32,4 @@ const GardensGalleryItem = ({ description, preview, images }: IPost) => {
         </div>
     );
 };
-export default GardensGalleryItem;
+export default RealizationsItem;

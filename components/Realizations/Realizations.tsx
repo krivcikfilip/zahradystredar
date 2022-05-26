@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
-import GardensGalleryItem from "./GardensGalleryItem";
+import RealizationsItem from "./RealizationsItem";
 import { usePosts } from "../../api/queries/usePosts";
 import { Unless, When } from "react-if";
 import ContentLoading from "../ContentLoading";
-import ClassName from "../../utils/ClassName";
 import * as _ from "lodash";
 import { useWindowResize } from "../../hooks/useWindowResize";
+import Section from "../../layout/Section";
 
-const GardensGallery = () => {
+/**
+ * Realizations component
+ */
+const Realizations = ({ title, allowLimit = false }: Props) => {
     const [limit, setLimit] = useState(15);
 
     const { posts, isLoading } = usePosts({ limit });
@@ -17,6 +20,8 @@ const GardensGallery = () => {
     useEffect(() => {
         const { width } = dimension;
 
+        if (!allowLimit) return;
+
         if (width < 600 && width > 400) {
             setLimit(8);
         } else if (width <= 400) {
@@ -24,23 +29,25 @@ const GardensGallery = () => {
         } else {
             setLimit(15);
         }
-    }, [dimension]);
-
-    const className = new ClassName("gardens-gallery");
-    if (isLoading) className.add("loading");
+    }, [allowLimit, dimension]);
 
     return (
-        <div className={className.parse()}>
+        <Section title={title} classSelector="realizations" isLoading={isLoading}>
             <When condition={isLoading}>
                 <ContentLoading />
             </When>
             <Unless condition={isLoading}>
                 {_.map(posts, (post) => (
-                    <GardensGalleryItem key={post.id} {...post} />
+                    <RealizationsItem key={post.id} {...post} />
                 ))}
             </Unless>
-        </div>
+        </Section>
     );
 };
 
-export default GardensGallery;
+interface Props {
+    allowLimit?: boolean;
+    title?: string;
+}
+
+export default Realizations;

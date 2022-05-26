@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { routes } from "../routes";
 import Section from "../layout/Section";
 import InfoBox from "../components/InfoBox";
-import GardensGallery from "../components/GardensGallery/GardensGallery";
+import Realizations from "../components/Realizations/Realizations";
 import OurJobBoxes from "../components/OurJobBoxes";
 
 /**
@@ -51,10 +51,8 @@ const Homepage = () => {
                     icon="gardener"
                 />
             </Section>
-            <Section title="Z našich realizací" classSelector="realizations">
-                <GardensGallery />
-            </Section>
-            <OurJobBoxes />
+            <Realizations title="Z našich realizací" allowLimit />
+            <OurJobBoxes title="Co děláme?" />
         </AppLayout>
     );
 };

@@ -11,6 +11,7 @@
     opacity: 0.6;
 
     &--logo {
+        opacity: 1 !important;
         padding: 0;
         transition: var(--fast-transition);
 

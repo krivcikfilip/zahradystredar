@@ -1,0 +1,15 @@
+/**
+ * Styles for Contact page
+ */
+
+.contact .section {
+    &--contact {
+        .text--name {
+            margin-bottom: 10px !important;
+        }
+
+        .text:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+}

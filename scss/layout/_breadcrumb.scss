@@ -1,0 +1,31 @@
+/**
+ * Styles for Breadcrumb component
+ */
+
+.breadcrumb {
+    display: flex;
+    margin-bottom: 10px;
+
+    a {
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+        padding-right: 10px;
+
+        .text {
+            opacity: 1 !important;
+        }
+
+        &::after {
+            @include absolute-center-y;
+            content: "/";
+            right: -5px;
+            font-weight: 500;
+            font-family: var(--family-rubik);
+        }
+    }
+
+    .text:last-child {
+        opacity: 0.6;
+    }
+}
