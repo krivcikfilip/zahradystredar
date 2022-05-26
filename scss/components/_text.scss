@@ -2,7 +2,7 @@
  * Styles for Text component
  */
 
-.typography {
+.text {
     span.underline {
         position: relative;
 
@@ -18,7 +18,7 @@
 }
 
 //Family
-.typography.family {
+.text.family {
     &--montserrat {
         letter-spacing: 0.3px;
         font-family: var(--family-montserrat);
@@ -31,7 +31,7 @@
 }
 
 //Weight
-.typography.weight {
+.text.weight {
     &--light {
         font-weight: 300;
     }
@@ -54,7 +54,7 @@
 }
 
 //Sizes
-.typography.size {
+.text.size {
     &--large-title {
         font-size: 60px;
         line-height: 70px;

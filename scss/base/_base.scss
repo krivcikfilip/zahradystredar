@@ -24,12 +24,15 @@
 
 body {
     background: var(--color-grey);
-
-    margin-bottom: 200px;
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 body,

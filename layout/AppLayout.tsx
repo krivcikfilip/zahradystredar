@@ -3,6 +3,7 @@ import { PropsWithChildren } from "../types/react";
 import NextHead from "next/head";
 import Navigation from "./Navigation/Navigation";
 import ClassName from "../utils/ClassName";
+import Footer from "./Footer";
 
 /**
  * App layout component
@@ -18,6 +19,7 @@ const AppLayout = ({ children, title, mainClass }: Props) => {
             <div className={className.parse()}>
                 <Navigation />
                 {children}
+                <Footer />
             </div>
         </Fragment>
     );

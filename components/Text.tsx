@@ -15,7 +15,7 @@ const Text = ({
     classSelector,
     underlineLastWorld = false,
 }: Props) => {
-    const className = new ClassName(`typography`);
+    const className = new ClassName(`text`);
     if (classSelector) className.addSelector(classSelector);
     className.addStyleVariant("size", size);
     className.addStyleVariant("family", family);

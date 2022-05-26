@@ -7,11 +7,13 @@
 @import "layout/appLayout";
 @import "layout/hero";
 @import "layout/section";
+@import "layout/footer";
 
 @import "layout/navigation/navigation";
 @import "layout/navigation/navigationItem";
 
 //Components
+@import "components/logo";
 @import "components/infoBox";
 @import "components/button";
 @import "components/icon";

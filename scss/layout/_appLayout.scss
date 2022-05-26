@@ -4,10 +4,11 @@
 
 .app-layout {
     max-width: 1440px;
-    margin: auto;
+    margin: auto auto 100px;
 
     nav,
-    section {
+    section,
+    footer {
         padding-left: 50px;
         padding-right: 50px;
     }
