@@ -6,9 +6,8 @@ import Text from "./Text";
 /**
  * InfoBox component
  */
-const InfoBox = ({ icon, description, title, size = "small", layout = "icon-left" }: Props) => {
+const InfoBox = ({ icon, description, title, layout = "icon-left" }: Props) => {
     const className = new ClassName("info-box");
-    className.addStyleVariant("size", size);
     className.addStyleVariant("layout", layout);
 
     return (
@@ -28,7 +27,6 @@ const InfoBox = ({ icon, description, title, size = "small", layout = "icon-left
 };
 
 interface Props {
-    size?: "small" | "full-width";
     layout?: "icon-left" | "icon-top";
     title: string;
     description: string;

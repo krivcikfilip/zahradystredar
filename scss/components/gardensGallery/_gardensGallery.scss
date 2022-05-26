@@ -11,3 +11,21 @@
         display: flex;
     }
 }
+
+@media (max-width: 1120px) {
+    .gardens-gallery {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 900px) {
+    .gardens-gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .gardens-gallery {
+        column-count: 1;
+    }
+}

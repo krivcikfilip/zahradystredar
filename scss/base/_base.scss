@@ -16,6 +16,7 @@
     --color-secondary: #caffb9;
     --color-white: #ffffff;
     --color-grey: #f8f8f8;
+    --max-width: 1440px;
     --family-montserrat: "Montserrat", sans-serif;
     --family-rubik: "Rubik", sans-serif;
     --large-radius: 20px;
@@ -24,7 +25,6 @@
 
 body {
     background: var(--color-grey);
-    overflow-x: hidden;
 }
 
 a {

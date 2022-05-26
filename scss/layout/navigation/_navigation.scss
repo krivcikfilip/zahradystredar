@@ -13,3 +13,11 @@
         height: 100%;
     }
 }
+
+@media (max-width: 900px) {
+    .navigation {
+        &__col--menu {
+            display: none;
+        }
+    }
+}

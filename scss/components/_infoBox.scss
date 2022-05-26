@@ -4,23 +4,13 @@
 
 .info-box {
     position: relative;
+    width: 100%;
     background: var(--color-white);
     border-radius: var(--large-radius);
     box-shadow: 0 5px 10px rgba(var(--color-primary-rgb), 0.1);
 
     .text--title {
         margin-bottom: 5px;
-    }
-}
-
-//Sizes
-.info-box.size {
-    &--small {
-        width: 280px;
-    }
-
-    &--full-width {
-        width: 100%;
     }
 }
 

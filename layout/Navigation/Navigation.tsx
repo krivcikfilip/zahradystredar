@@ -9,12 +9,12 @@ import { routes } from "../../routes";
 const Navigation = () => {
     return (
         <nav className="navigation">
-            <div className="navigation__col">
+            <div className="navigation__col navigation__col--logo">
                 <NavigationItem href={routes.home} classSelector="logo">
                     <Logo />
                 </NavigationItem>
             </div>
-            <div className="navigation__col">
+            <div className="navigation__col navigation__col--menu">
                 <NavigationItem href={routes.home} value="Domů" />
                 <NavigationItem href={routes.realization} value="Realizace" />
                 <NavigationItem href={routes.ourJob} value="Co děláme?" />
