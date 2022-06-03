@@ -16,7 +16,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const { data } = await findFBPostsRequest();
 
     const checkIsPostAllowed = (post: IFBPost): boolean => {
-        return _.some(post?.message_tags, (tag) => tag.name === "#realizace");
+        return _.includes(post?.message, "#realizace");
     };
 
     const extractAttachments = (post: IFBPost): IFBPostSubAttachment[] => {
